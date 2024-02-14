@@ -23,3 +23,27 @@ Add address
 Update address
 Delete address
 ```
+
+# Folder Structure Updated
+
+```
+mkdir validation
+cd validation
+type nul > userValidation.js
+type nul > productValidation.js
+```
+```
+mkdir services
+type nul > userService.js
+type nul > productService.js
+```
+```
+mkdir routes
+type nul > userRoutes.js
+type nul > productRoutes.js
+```
+```
+mkdir controllers
+type nul > usersController.js
+type nul > productController.js
+```

@@ -1,6 +1,24 @@
 {
   "dependencies": {
     "dotenv": "^16.4.4",
-    "express": "^4.18.2"
-  }
+    "express": "^4.18.2",
+    "mysql": "^2.18.1"
+  },
+  "scripts": {
+    "start": "node server.js"
+  },
+  "name": "backend-based-e-commerce-app-",
+  "description": "```\r There can be a validation folder and then in that folder, we can separate based on route file(users validation, product validation).\r ```\r ```\r Validation can be implemented at route level(means, call function at router level then allow user to move next function).\r ```\r ```\r Service files can be separated(Like you can create a services folder and do all the database operations there and call it from controller rather than writing query on controller).\r ```\r ```\r Next task is that : \r ```\r ```\r Update profile\r Get profile\r Add cart\r Remove cart\r Add address\r Update address\r Delete address\r ```",
+  "version": "1.0.0",
+  "main": "server.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/raftaarrashedin/Backend-based-E-commerce-app-.git"
+  },
+  "author": "raftaar rashedin",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/raftaarrashedin/Backend-based-E-commerce-app-/issues"
+  },
+  "homepage": "https://github.com/raftaarrashedin/Backend-based-E-commerce-app-#readme"
 }

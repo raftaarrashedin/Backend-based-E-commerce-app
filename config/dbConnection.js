@@ -1,6 +1,7 @@
 const {DB_HOST, DB_USERNAME, DB_PASSWORD, DB_NAME} = process.env
+const mysql = require('mysql')
 
-const mysql = mysql.createConnection({
+const conn = mysql.createConnection({
 	host : DB_HOST,
 	user : DB_USERNAME,
 	password : DB_PASSWORD,
@@ -10,7 +11,7 @@ const mysql = mysql.createConnection({
 conn.connect((error) => {
 	if(error) throw error;
 
-	console.log(DB_NAME+ 'DATABASE CONNECTED')
+	console.log(DB_NAME+ ' DATABASE CONNECTED')
 })
 
 module.exports = conn;

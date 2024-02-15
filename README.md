@@ -47,3 +47,20 @@ mkdir controllers
 type nul > usersController.js
 type nul > productController.js
 ```
+
+# Installed Some Dependencies
+
+```
+npm i mysql
+npm i bryptjs
+npm i bcryptjs
+npm i jsonwebtoken
+npm i cors
+npm i body-parser
+npm i express-validator
+
+nodemon server
+
+git add . && git status && git commit -m "registeration for user is working fine " && git push origin main
+
+```

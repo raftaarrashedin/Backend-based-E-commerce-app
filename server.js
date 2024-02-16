@@ -5,6 +5,7 @@ const express = require('express')
 const app = express()
 
 const userRouter = require('./routes/userRoutes')
+const productRouter = require('./routes/productRoutes')
 
 const cors = require('cors')
 
@@ -15,6 +16,7 @@ app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({extended:true}))
 app.use(cors())
 app.use('/api',userRouter)
+app.use('/api/product',productRouter)
 
 // Error Handling
 app.use((errors,req,res,next) => {

@@ -52,21 +52,26 @@ const updateProduct = (req,res) => {
 }
 
 
+// Function to handle product deletion
+const deleteProduct = (req,res) => {
+    const productId = req.params.id;
 
+    db.query('DELETE FROM product WHERE id = ?',productId, (errors,results) => {
+        if(errors) {
+            console.log('Error Deleting Product',errors);
+            return res.status(406).json({errors : 'Failed to Delete Product!'})
+        }
+        console.log('Product Deleted Successfull!!!')
+        return res.status(200).json({message : "Product Deleted Successfull!!!"})
+    })
+}
 
 
 
 
 
 module.exports = {
-    createProduct
+    createProduct,
+    updateProduct,
+    deleteProduct
 }
-// db.query(
-    //     `INSERT INTO product(product_name,product_detail,product_category,product_price,product_owner) VALUES(
-    //         '${req.body.product_name}',
-    //         '${req.body.product_detail}',
-    //         '${req.body.product_category}',
-    //         '${req.body.product_price}',
-    //         '${req.body.product_owner}'
-    //     );`
-// )
